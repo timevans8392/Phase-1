@@ -1,5 +1,6 @@
 body {
-	background:rgb(209, 5, 5);
+  background:rgb(209, 5, 5);
+  
 }
 
 .header h2 {
@@ -88,4 +89,17 @@ h3 {
   } 
 
   
+.copyright {
+  color: white;
+  text-align: center;
+}
 
+
+.pokemonNavbarImage {
+  height: 50px;
+  width: 50px;
+}
+
+.nav-link {
+  color: white;
+}
