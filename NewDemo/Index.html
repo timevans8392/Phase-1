@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="Index.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+
+    <div class="container-fluid">
+        <div class="row" id="big">
+            <div class="col-fluid ml-4" id="playerColumn">
+                <button class="row" id="moveOne" onclick="moveOne()" type="button">Sexy</button> 
+                <button class="row" id="moveTwo" onclick="moveTwo()" type="button">Taunt</button> 
+                <button class="row" id="moveThree" onclick="moveThree()" type="button">Squad Up!</button>
+                <button class="row" id="moveFour" onclick="moveFour()" type="button">Battle Mode</button> 
+                <p class="row">Squirtle 100/100 Hp</p>
+                <img class="row" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/7.png">
+            </div>
+            <div class="col-fluid" id="gifColumn">
+                <img id="battleGif" src="https://media1.giphy.com/media/3xgR6JaucMaXe/200.webp?cid=ecf05e47c9a6005b4f655ea74574337f5ffb15e040c25cb1&rid=200.webp">
+            </div>
+            <div class="col-fluid" id="opponentColumn">
+                <p class="row" id="charHealth"></p>
+                <img class="row" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png">
+            </div>
+        </div>
+        <div class="row">
+            <div id="informationRow">
+                
+            </div>
+        </div>
+
+    </div>
+
+</body>
