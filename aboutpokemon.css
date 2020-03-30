@@ -1,0 +1,15 @@
+body {
+    background:rgb(209, 5, 5);
+    
+  }
+
+.pokemonNavbarImage {
+    height: 50px;
+    width: 50px;
+  }
+
+.aboutPokemon {
+    margin: 20px;
+    color: white;
+    font-size: 50px;
+}
