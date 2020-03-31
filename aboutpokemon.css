@@ -13,3 +13,12 @@ body {
     color: white;
     font-size: 50px;
 }
+
+.wikiPokemon {
+  color: white;
+  margin: 10px;
+}
+
+.btn-secondary {
+  margin: 20px;
+}
