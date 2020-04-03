@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Catch the Pokemon!</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="index.css">
+        <script src="Battlemon.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    </head>
+    <body id="bodyID">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">
+                <img class="pokemonNavbarImage" src="/Users/henrylee/Desktop/pokemon.jpeg">
+              </a>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Pokemon Game<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">About Pokemon<span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Contact us<span class="sr-only">(current)</span></a>
+                  </li>
+              </ul>
+            </div>
+        </nav>
+        <div class="container d-flex flex-column" id="battleMain">
+            <div class="row" id="topPart">
+                <img class="col" id="rocketGif"  src="https://media.giphy.com/media/fp1iYqy3qHrpu/giphy.gif">
+            </div>
+            <div class="row" id="midPart">
+                <div class="row justify-content-center" id="selectDescription">
+                    <h1>Choose 3 Pokemon</h1>
+                </div>
+                <div class="row d-flex flex-row justify-content-around" id="selectPick">
+                    <div class="col d-flex flex-column" style="background-color: blue; height: 300px;" id="pokePick">
+                        <img class="align-self-center" id="hoverPic" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png">
+                        <h2 class="align-self-center" id="hoverName">Bulbasaur</h2>
+                        <p class="align-self-center" id="hoverDescription">This is Bulbasaur</p>
+                    </div>
+                    <div class="col-6" id="picPick">
+                        <div class="row justify-content-between" style="height: 100px;">
+                            <button class="col butPick" type="button">Squirtle</button>
+                            <button class="col butPick" type="button">Bulbasaur</button>
+                            <button class="col butPick" type="button">Charmander</button>
+                        </div>
+                        <div class="row" style="height: 100px;">
+                            <button class="col butPick" type="button">Snorlax</button>
+                            <button class="col butPick" type="button">Eevee</button>
+                            <button class="col butPick" type="button">Gengar</button>
+                        </div>
+                        <div class="row" style="height: 100px;">
+                            <button class="col butPick" type="button">Vulpix</button>
+                            <button class="col butPick" type="button">Pikachu</button>
+                            <button class="col butPick" type="button">Pidgeot</button>
+                        </div>
+                        <div class="row" style="height: 100px;">
+                            <button class="col butPick" type="button">Jigglypuff</button>
+                            <button class="col butPick" type="button">Magikarp</button>
+                            <button class="col butPick" type="button">Psyduck</button>
+                        </div>
+                    </div>
+                    <div class="col" style="background-color: green;" id="infoPick">
+                        <div class="row d-flex flex-row justify-content-center" id="rosterPick">
+                            <div class="align-self-center">
+                                <h3>Roster</h3>
+                            </div>
+                            <div id="selectedCell">
+                                <img class="align-self-center clearOne" id="hoverPicOne" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png">
+                                <p class="align-self-center clearTwo" id="hoverNameOne">Bulbasaur</p>
+                            </div>
+                            <div id="selectedCell">
+                                <img class="align-self-center clearOne" id="hoverPicTwo" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png">
+                                <p class="align-self-center clearTwo" id="hoverNameTwo">Bulbasaur</p>
+                            </div>
+                            <div id="selectedCell">
+                                <img class="align-self-center clearOne" id="hoverPicThree" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png">
+                                <p class="align-self-center clearTwo" id="hoverNameThree">Bulbasaur</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="row" id="buttonBanner">
+                <button type="button">Proceed to battle</button>
+            </div>
+            <div class="row" id="bottomPart" style="height: 300px; width: 100%; background-color:purple;">
+                <div class="row" id="battleDisplay">
+                    <div class="topLayer">
+                        <div id="enemyHUD">
+                            <p id="enemyName">Meowth</p>
+                            <p id="enemyHP">100/100 HP</p>
+                        </div>
+                        <img id="enemySprite" src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/52.png" id="enemyPokePic">
+                    </div>
+                    <div class="midLayer">
+                        
+                        <img id="actionImage" src="https://media3.giphy.com/media/N7UQCEtGgRMRi/giphy.gif?cid=ecf05e47c5cdf9adc51b51ec41142331d6b15d9c8e9b7d95&rid=giphy.gif" id="battleImage">
+                    </div>
+                    <div class="bottomLayer">
+                        <img id="playerSprite" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png" id="playerPoke">
+                        <div id="playerPokeHUD">
+                            <p id="playerPokeName">Bulbasaur</p>
+                            <p id="playerPokeHP">100/100 HP</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="infoPart">
+                    <div id="commandLayer">
+                        <p id="statementbanner">What will bulbasaur do?</p>
+                        <div id="commandButtons">
+                            <div>
+                                <button class="moveButton" type="button" id="butMove1">Move 1</button>
+                                <button class="moveButton" type="button" id="butMove2">Move 2</button>
+                            </div>
+                            <div>
+                                <button class="moveButton" type="button" id="butMove3">Move 3</button>
+                                <button class="moveButton" type="button" id="butMove4">Phone A Friend</button>
+                            </div>
+                            <div>
+                                <button class="moveButton" type="button" id="butSwitch">Switch Pokemon</button>
+                                <button class="moveButton" type="button" id="butQuit">Quit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+        </div>
+    </body>
+</html>
