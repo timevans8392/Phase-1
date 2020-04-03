@@ -4,7 +4,7 @@
         <title>About Pokemon</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link rel="stylesheet" href="/Users/henrylee/code/Phase-1/aboutpokemon.css">
-        
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     </head>
     <body>
@@ -30,9 +30,28 @@
           <div class="aboutPokemon"><b><i>About Pokemon</i></b></div>
           <div id="aboutContent">This is content</div>
           <br />
-          <button type="button" class="btn btn-secondary btn-lg">Click to view a pokemon!</button>
-          <div id="pokemonHere"></div>
-
-          <script src="/Users/henrylee/code/Phase-1/aboutpokemon.js"></script>
+          <button type="button" class="btn btn-secondary btn-lg" id="firstButton">Click to see a pokemon and add it to the table!</button>
+            <div id="pokemonHere"></div>
+            <table class="table">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Image</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Height</th>
+                  <th scope="col">Weight</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row" class="rowClass"></th>
+                  <td class="image"></td>
+                  <td class="name"></td>
+                  <td class="height"></td>
+                  <td class="weight"></td>
+                </tr>
+              </tbody>
+            </table>
+          <script src="aboutpokemon.js"></script>
     </body>
 </html>

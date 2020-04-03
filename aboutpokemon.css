@@ -22,3 +22,14 @@ body {
 .btn-secondary {
   margin: 20px;
 }
+
+#pokemonHere {
+  margin: 20px;
+  font-size: 7px;
+  color: white;
+}
+
+.row-cols-2 {
+  color: white;
+  border: 5px;
+}
