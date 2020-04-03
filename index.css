@@ -107,3 +107,43 @@ h3 {
   width: 50px;
 }
 
+
+.nav-link {
+  color: white;
+}
+
+
+#battleMain {
+
+}
+
+#rocketGif {
+  border: 1px solid black;
+}
+
+.butPick {
+  margin: 3px;
+  border: 2px solid blue;
+  
+  background-color: blue;
+  color: white;
+}
+
+.butPick:hover {
+  background-color: darkblue;
+  color: white;
+  outline: 2px solid red;
+  outline-offset: -6px;
+}
+
+.butPick.down {
+  background-color: navy;
+}
+
+.butPick.down:hover {
+  background-color: black;
+  outline: 2px solid white;
+  outline-offset: -6px;
+  border: 2px solid black;
+}
+
