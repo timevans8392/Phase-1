@@ -327,7 +327,7 @@ const pokePath = "https://pokeapi.co/api/v2/pokemon/"
 
 //Methods to load upon loading of the webpage
 $(document).ready(function() {
-
+    document.querySelector("#actionImage").style.visibility = "hidden"
     $("#topPart").hide()
     $("#bottomPart").hide()
     addListers()
@@ -426,7 +426,6 @@ function addPokemon (btn, poke) {
 
 function transitionToBattle () {
     $("#midPart").hide()
-    $("#actionImage").hide()
     $("#bottomPart").show()
     battleStart()
     updatePokeSprite()
@@ -507,9 +506,10 @@ function actionBut (but) {
           url: "http://api.giphy.com/v1/gifs/search?q="+selectedPokemon.team[0].name.toLowerCase()+"&api_key=O6gYWlFjkxGXfXLfGAo201rGt0RZLZkQ",
           success: function (poke) {
               var move = getMove(but.id)
-            console.log(poke.data[move])
-            $("#actionImage").prop("src",poke.data[move].images.url)
+            $("#actionImage").prop("src",poke.data[move].images.original.url)
             $("#actionImage").show()
+            let actionIMG = document.querySelector("#actionImage").style.visibility = "visible"
+            $("#statementbanner").prop("innerHTML",selectedPokemon.team[0].name+" used ")
           }
         }
       )
