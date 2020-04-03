@@ -22,3 +22,9 @@ Trying to search without an input will alert the user.
 I made the search input case insensitive. 
 Out of the 807 pokemon available, not all will have GIFs, or GIFs associated with Pokemon. So adding "pokemon" to the search string will almost always return some kind of pokemon GIF when there is not a specific pokemon GIF available. There are some pretty freaky pokemon GIFs that show up due to specific GIFs not existing. 
 
+
+Tuesday, 3/31/20 by Ulysses
+I changed the style of the random pokemon button.
+I added a required search property to the input tag.
+I am still contemplating how many search results should be available for the random GIFs.
+I renamed a div to <pokemon-container>
