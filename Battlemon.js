@@ -6,7 +6,7 @@
 var pokedex = {
     "bulbasaur": {
         "name": "Bulbasaur",
-        "HP": 0,
+        "HP": 100,
         "searchName": "bulbasaur",
         "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
         "rearSprite": "",
@@ -27,7 +27,7 @@ var pokedex = {
     },
     "squirtle": {
         "name": "Squirtle",
-        "HP": 0,
+        "HP": 100,
         "searchName": "squirtle",
         "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png",
         "rearSprite": "",
@@ -48,7 +48,7 @@ var pokedex = {
     },
     "charmander": {
         "name": "Charmander",
-        "HP": 0,
+        "HP": 100,
         "searchName": "charmander",
         "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png",
         "rearSprite": "",
@@ -69,7 +69,7 @@ var pokedex = {
     },
     "snorlax": {
         "name": "Snorlax",
-        "HP": 0,
+        "HP": 100,
         "searchName": "snorlax",
         "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/143.png",
         "rearSprite": "",
@@ -90,7 +90,7 @@ var pokedex = {
     },
     "eevee": {
         "name": "Eevee",
-        "HP": 0,
+        "HP": 100,
         "searchName": "eevee",
         "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/133.png",
         "rearSprite": "",
@@ -111,7 +111,7 @@ var pokedex = {
     },
     "gengar": {
         "name": "Gengar",
-        "HP": 0,
+        "HP": 100,
         "searchName": "gengar",
         "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/94.png",
         "rearSprite": "",
@@ -132,7 +132,7 @@ var pokedex = {
     },
     "vulpix": {
         "name": "Vulpix",
-        "HP": 0,
+        "HP": 100,
         "searchName": "vulpix",
         "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/37.png",
         "rearSprite": "",
@@ -153,7 +153,7 @@ var pokedex = {
     },
     "pikachu": {
         "name": "Pikachu",
-        "HP": 0,
+        "HP": 100,
         "searchName": "pikachu",
         "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png",
         "rearSprite": "",
@@ -174,7 +174,7 @@ var pokedex = {
     },
     "pidgeot": {
         "name": "Pidgeot",
-        "HP": 0,
+        "HP": 100,
         "searchName": "pidgeot",
         "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/18.png",
         "rearSprite": "",
@@ -195,7 +195,7 @@ var pokedex = {
     },
     "jigglypuff": {
         "name": "Jigglypuff",
-        "HP": 0,
+        "HP": 100,
         "searchName": "jigglypuff",
         "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/39.png",
         "rearSprite": "",
@@ -216,7 +216,7 @@ var pokedex = {
     },
     "magikarp": {
         "name": "Magikarp",
-        "HP": 0,
+        "HP": 100,
         "searchName": "magikarp",
         "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/129.png",
         "rearSprite": "",
@@ -237,7 +237,7 @@ var pokedex = {
     },
     "psyduck": {
         "name": "Psyduck",
-        "HP": 0,
+        "HP": 100,
         "searchName": "psyduck",
         "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/54.png",
         "rearSprite": "",
@@ -258,7 +258,7 @@ var pokedex = {
     },
     "meowth": {
         "name": "Meowth",
-        "HP": 0,
+        "HP": 100,
         "searchName": "jigglypuff",
         "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/52.png",
         "rearSprite": "",
@@ -267,7 +267,7 @@ var pokedex = {
     },
     "charizard": {
         "name": "Charizard",
-        "HP": 0,
+        "HP": 100,
         "searchName": "charizard",
         "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png",
         "rearSprite": "",
@@ -290,7 +290,7 @@ var pokedex = {
     },
     "mewtwo": {
         "name": "Mewtwo",
-        "HP": 0,
+        "HP": 100,
         "searchName": "mewtwo",
         "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/150.png",
         "rearSprite": "",
@@ -319,6 +319,9 @@ var selectedPokemon = {
     "team": [],
     "buttonToggle": [],
     "enemyTeam": [pokedex.meowth, pokedex.charizard,pokedex.mewtwo],
+    "playerPoke": null,
+    "enemyPoke": null,
+    "statementBanner": "",
 }
 
 
@@ -437,37 +440,17 @@ function transitionToBattle () {
             console.log("Go")
           }
         }
-      )
+    )
 }
-
-var state = {
-    "enemyName": "",
-    "enemyHP": "",
-    "actionImage": "",
-    "playerPokeName": "",
-    "playerPokeHP": "",
-    "statementBanner": "",
-    "butMove1": "",
-    "butMove2": "",
-    "butMove3": "",
-    "butMove4": "",
-    "butSwitch": "",
-    "butQuit": "",
-}
-
-function updateArena (item, changeTo) {
-    state[item] = changeTo
-}
-
 function updateUI () {
-    
-    $("#enemyName").prop("innerHTML", state.enemyName)
-    $("#enemyHP").prop("innerHTML", state.enemyHP)
-    $("#playerPokeName").prop("innerHTML", state.playerPokeName)
-    $("#playerPokeHP").prop("innerHTML", state.playerPokeHP)
-    $("#butMove1").prop("innerHTML", state.butMove1)
-    $("#butMove2").prop("innerHTML", state.butMove2)
-    $("#butMove3").prop("innerHTML", state.butMove3)
+    $("#enemyName").prop("innerHTML", selectedPokemon.enemyPoke.name)
+    $("#enemyHP").prop("innerHTML", selectedPokemon.enemyPoke.HP + " / 100")
+    $("#playerPokeName").prop("innerHTML", selectedPokemon.playerPoke.name)
+    $("#playerPokeHP").prop("innerHTML", selectedPokemon.playerPoke.HP + " / 100")
+    $("#butMove1").prop("innerHTML", selectedPokemon.playerPoke.butMove1)
+    $("#butMove2").prop("innerHTML", selectedPokemon.playerPoke.butMove2)
+    $("#butMove3").prop("innerHTML", selectedPokemon.playerPoke.butMove3)
+    $("#statementBanner").prop("innerHTML",selectedPokemon.statementBanner)
 }
 
 function updatePokeSprite () {
@@ -485,41 +468,83 @@ function updatePokeSprite () {
 }
 
 function battleStart () {
-    state.enemyName = selectedPokemon.enemyTeam[0].name
-    state.enemyHP = selectedPokemon.enemyTeam[0].HP = 100
-    actionImage = ""
-    state.playerPokeName = selectedPokemon.team[0].name
-    state.playerPokeHP = selectedPokemon.team[0].HP = 100
-    state.statementBanner = "What will " + state.playerPokeName + " do?"
-    state.butMove1 = selectedPokemon.team[0].moveOne.name
-    state.butMove2 = selectedPokemon.team[0].moveTwo.name
-    state.butMove3 = selectedPokemon.team[0].moveThree.name
-    state.butMove4 = "I'm feeling lucky!"
-    state.butSwitch = "Change Poke"
-    state.butQuit = "Quit"
+    selectedPokemon.playerPoke = selectedPokemon.team[0]
+    selectedPokemon.enemyPoke = selectedPokemon.enemyTeam[0]
 
+    actionImage = ""
+    selectedPokemon.statementBanner = "What will " + selectedPokemon.playerPoke.name + " do?"
 }
 
 function actionBut (but) {
     $.ajax(
         {
-          url: "http://api.giphy.com/v1/gifs/search?q="+selectedPokemon.team[0].name.toLowerCase()+"&api_key=O6gYWlFjkxGXfXLfGAo201rGt0RZLZkQ",
+          url: "http://api.giphy.com/v1/gifs/search?q="+selectedPokemon.playerPoke.name.toLowerCase()+"&api_key=O6gYWlFjkxGXfXLfGAo201rGt0RZLZkQ",
           success: function (poke) {
-              var move = getMove(but.id)
+            var move = getMove(but.id)
             $("#actionImage").prop("src",poke.data[move].images.original.url)
-            $("#actionImage").show()
-            let actionIMG = document.querySelector("#actionImage").style.visibility = "visible"
-            $("#statementbanner").prop("innerHTML",selectedPokemon.team[0].name+" used ")
+            var dmg = damage(selectedPokemon.enemyPoke)
+            $("#statementbanner").prop("innerHTML",selectedPokemon.playerPoke.name+" damaged " + selectedPokemon.enemyPoke.name + " for " + dmg)
+            
+            $("#moveButton").prop('disabled', true)
+            setTimeout(function(){
+                document.querySelector("#actionImage").style.visibility = "visible"
+                setTimeout(function(){ 
+                    document.querySelector("#actionImage").style.visibility = "hidden" 
+                    updateUI()
+                    enemyTurn()
+                }, 2000)
+                
+            }, 1000)
+            
           }
         }
       )
 }
 
-function getMove(id){
+function getMove (id){
     switch(id) {
-        case "butMove1": return selectedPokemon.team[0].moveOne.animation; break;
-        case "butMove2": return selectedPokemon.team[0].moveTwo.animation; break;
-        case "butMove3": return selectedPokemon.team[0].moveThree.animation; break;
+        case "butMove1": return selectedPokemon.playerPoke.moveOne.animation; break;
+        case "butMove2": return selectedPokemon.playerPoke.moveTwo.animation; break;
+        case "butMove3": return selectedPokemon.playerPoke.moveThree.animation; break;
 
     }
+}
+
+function enemyTurn () {
+    $("#statementbanner").prop("Team Rocket's Turn")
+    $.ajax(
+        {
+          url: "http://api.giphy.com/v1/gifs/search?q="+selectedPokemon.enemyPoke.name.toLowerCase()+"&api_key=O6gYWlFjkxGXfXLfGAo201rGt0RZLZkQ",
+          success: function (poke) {
+            $("#actionImage").prop("src",poke.data[0].images.original.url)
+            var dmg = damage(selectedPokemon.playerPoke)
+            $("#statementbanner").prop("innerHTML",selectedPokemon.enemyPoke.name+ " damaged " + selectedPokemon.playerPoke.name + " for " + dmg)
+            
+            setTimeout(function(){
+                document.querySelector("#actionImage").style.visibility = "visible"
+                setTimeout(function(){ 
+                    document.querySelector("#actionImage").style.visibility = "hidden"
+                    updateUI()
+                    playerTurn()
+                }, 2000)
+            }, 1000)
+            
+          }
+        }
+      )
+
+}
+
+function playerTurn () {
+    $("#statementbanner").prop("innerHTML", "Your Turn")
+    $("#moveButton").prop('disabled', false)
+}
+
+function damage (poke) {
+    let dmg = Math.floor(Math.random() * 22) + 33
+    poke.HP = poke.HP - dmg
+    console.log(poke.HP)
+    console.log(selectedPokemon.playerPoke.HP)
+    console.log(selectedPokemon.enemyPoke.HP)
+    return dmg
 }
