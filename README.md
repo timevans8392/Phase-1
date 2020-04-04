@@ -28,3 +28,8 @@ I changed the style of the random pokemon button.
 I added a required search property to the input tag.
 I am still contemplating how many search results should be available for the random GIFs.
 I renamed a div to <pokemon-container>
+
+Friday, 4/3/20 by Ulysses
+I updated the returned values from the API call.
+I tried making the layout more engaging/inviting.
+Alternate js library use is still pending. 
