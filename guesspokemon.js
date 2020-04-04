@@ -100,6 +100,7 @@ $('#random').click(randomPokemon)
 
 // This is a aboutPokemon button click event and will insert about pokemon between about pokemon and random pokemon buttons
 
+
 $("#show").click(function () 
 {
   $("#show").css("display", "none");
@@ -116,6 +117,18 @@ $("#hide").click(function ()
   $("#show").show();
 }
 )
+
+  
+  
+//These are the jQuery UI functions:
+$( "#random" ).click(function() {
+  $( "#pokemon-container" ).effect( 'slide', 500);
+});
+
+$( "#search-form" ).submit(function() {
+  $( "#pokemon-container" ).effect( 'slide', 500);
+});
+
 
 })
           
