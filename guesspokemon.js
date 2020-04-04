@@ -112,10 +112,25 @@ $('#random').click(randomPokemon)
   return emptyArr.join(' ');
 }
 
+// This is a aboutPokemon button click event and will insert about pokemon between about pokemon and random pokemon buttons
 
+$("#show").click(function () 
+{
+  $("#show").css("display", "none");
+  $("#data").show();
+  $("#hide").show();
+  $("#data").html(`<div id="wikiPokemon">Pokémon, also known as Pocket Monsters in Japan, is a Japanese media franchise managed by the Pokémon Company, a company founded and with shares divided between Nintendo, Game Freak, and Creatures. The franchise copyright and Japanese trademark is shared by all three companies, but Nintendo is the sole owner of the trademark in other countries. The franchise was created by Satoshi Tajiri in 1995, and is centered on fictional creatures called "Pokémon", which humans, known as Pokémon Trainers, catch and train to battle each other for sport. The English slogan for the franchise is "Gotta Catch 'Em All". Works within the franchise are set in the Pokémon universe.</div>`)
+}
+)
 
+$("#hide").click(function () 
+{
+  $("#hide").css("display", "none");
+  $("#data").hide();
+  $("#show").show();
+}
+)
 
-  
 })
           
         
