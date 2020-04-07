@@ -44,3 +44,7 @@ Got rid of about pokemon page and combined with Uly's page.
 
 Sunday, 4/5/20 by Henry
 Got rid of the nav bar in Quintus Batllemon.html file.
+
+Monday, 4/6/20 by Ulysses
+I adjusted some of the code in the index.html file as that is now the main html file.
+I also fixed some bug issues by inputing an if satement on the status of the network response. 
