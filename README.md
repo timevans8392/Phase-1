@@ -33,3 +33,14 @@ Friday, 4/3/20 by Ulysses
 I updated the returned values from the API call.
 I tried making the layout more engaging/inviting.
 Alternate js library use is still pending. 
+
+Saturday, 4/4/20 by Ulysses
+I cleaned up the code in the guesspokemon.js.
+I added a link to GIPHY to encourage the user to create a GIF that is not appearing.
+I implemented an effect from jQuery UI on the div containing the API results.
+
+Saturday, 4/4/20 by Henry
+Got rid of about pokemon page and combined with Uly's page.
+
+Sunday, 4/5/20 by Henry
+Got rid of the nav bar in Quintus Batllemon.html file.

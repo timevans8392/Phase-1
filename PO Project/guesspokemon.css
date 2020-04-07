@@ -90,7 +90,7 @@ h3 {
   transition-duration: 0.2s;
   } 
   
-  #random, #about {
+  #random, #show, #hide {
     border-radius: 20px 20px 20px 20px;
     margin: 30px 0px 30px 0px;
   }
@@ -188,6 +188,61 @@ margin-left:110px;
   margin-right:225px;
 }
 
+/* .renderabout {
+  color: white;
+} */
+
+#hide {
+  display: none;
+}
+
+#show {
+  display: true;
+}
+
+#data {
+  display: none;
+}
+
+#wikiPokemon {
+  color: white;
+}
+
+#show {
+  background-color:gold;
+  color: rgb(0, 57, 180);
+  border-radius: 20px 20px 20px 20px;
+  border-color:white;
+  transition-duration: 0.2s;
+  font-weight: bold;
+}
+
+#hide {
+  background-color:gold;
+  color: rgb(0, 57, 180);
+  border-radius: 20px 20px 20px 20px;
+  border-color:white;
+  transition-duration: 0.2s;
+  font-weight: bold;
+}
+
+#show:hover { 
+  color: white; 
+  background-color:rgb(0, 57, 180);
+  border-color:gold;
+  transition-duration: 0.2s;
+  }
+
+  #hide:hover { 
+    color: white; 
+    background-color:rgb(0, 57, 180);
+    border-color:gold;
+    transition-duration: 0.2s;
+    }
 
 
+.maker {
+  color:white;
+  text-align: center;
+}
 
