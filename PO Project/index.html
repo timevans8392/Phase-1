@@ -10,7 +10,7 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/ball.jpg" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Vendor CSS Files -->
@@ -19,10 +19,11 @@
   <link href="assets/vendor/ionicons/css/ionicons.min.css" rel="stylesheet">
   <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
-  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet"> 
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  
 
   <!-- =======================================================
   * Template Name: DevFolio - v2.0.0
@@ -30,6 +31,14 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="guesspokemon.js"></script>
+  <link rel="stylesheet" href="guesspokemon.css"/>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <link rel="icon" href="http://images6.fanpop.com/image/photos/40200000/Pixel-Togepi-togepi-40290487-200-200.gif" type="image/x-icon">
+  
 </head>
 
 <body id="page-top">
@@ -81,180 +90,63 @@
   </div><!-- End Intro Section -->
   
   <section id="about" class="about-mf sect-pt4 route">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="box-shadow-full">
-            <div class="row">
-              <div class="col-md-6">
-                <div class="row">
-                  <div class="col-sm-6 col-md-5">
-                    <div class="about-img">
-                      <img src="assets/img/testimonial-2.jpg" class="img-fluid rounded b-shadow-a" alt="">
-                    </div>
+   
+                <center><div class="container"></center>
+                  <div class="row">
+                      <div class="col-12 header text-center">
+                          <h2 class="display-2">Who's that Pokémon?</h2>
+                          <h3><em>Gotta catch 'em all!</em></h3>
+                          <img class="charmander1" src="https://media.giphy.com/media/Hw7O9Np7JpXK8/giphy.gif">
+                          <img class="charmander2" src="https://media.giphy.com/media/Hw7O9Np7JpXK8/giphy.gif">
+                          <button id="about" class="input-group-btn"><strong>About Pokemon</strong></button><br>
+                          <div class="aboutPopup"></div>
+                          <br>
+                          <img class="charmander1" src="https://media.giphy.com/media/Hw7O9Np7JpXK8/giphy.gif">
+                          <img class="charmander2" src="https://media.giphy.com/media/Hw7O9Np7JpXK8/giphy.gif">
+                          <button id="random" class="input-group-btn"><strong>Random Pokemon</strong></button>
+                          
+                         
+                      </div>
                   </div>
-                  <div class="col-sm-6 col-md-7">
-                    <div class="about-info">
-                      <p><span class="title-s">Name: </span> <span>Morgan Freeman</span></p>
-                      <p><span class="title-s">Profile: </span> <span>full stack developer</span></p>
-                      <p><span class="title-s">Email: </span> <span>contact@example.com</span></p>
-                      <p><span class="title-s">Phone: </span> <span>(617) 557-0089</span></p>
-                    </div>
+                  <hr>
+                  <div class="row">
+                      <div class="col-20 search">
+                          <form id="search-form">
+                              <div class="input-group input-group-lg">
+                                  <input class="form-control search-bar"required type="search" placeholder="Search by Name or by Pokédex...">
+                                  <button class="btn btn-primary input-group-btn" type="submit" ><strong>Search</strong></button>
+                              </div>
+                          </form>
+                      </div>
                   </div>
-                </div>
-                <div class="skill-mf">
-                  <p class="title-s">Skill</p>
-                  <span>HTML</span> <span class="pull-right">85%</span>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                  <hr>
+                  <div class="row">
+                      <div class="col-12 results">
+                      
+                          <div id="pokemon-container">
+                              <canvas id="c"></canvas>
+                                  
+                          </div>
+          
+                      </div>
                   </div>
-                  <span>CSS3</span> <span class="pull-right">75%</span>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <span>PHP</span> <span class="pull-right">50%</span>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <span>JAVASCRIPT</span> <span class="pull-right">90%</span>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </div>
+          
               </div>
-              <div class="col-md-6">
-                <div class="about-me pt-4 pt-md-0">
-                  <div class="title-box-2">
-                    <h5 class="title-left">
-                      About me
-                    </h5>
-                  </div>
-                  <p class="lead">
-                    Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur arcu erat, accumsan id
-                    imperdiet et, porttitor
-                    at sem. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Nulla
-                    porttitor accumsan tincidunt.
-                  </p>
-                  <p class="lead">
-                    Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis
-                    porttitor volutpat. Vestibulum
-                    ac diam sit amet quam vehicula elementum sed sit amet dui. porttitor at sem.
-                  </p>
-                  <p class="lead">
-                    Nulla porttitor accumsan tincidunt. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
-                    Nulla porttitor accumsan
-                    tincidunt. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   </section><!-- End About Section -->
 
 
     <!-- ======= Services Section ======= -->
     <section id="service" class="services-mf route">
       <div class="container">
+        
         <div class="row">
-          <div class="col-sm-12">
-            <div class="title-box text-center">
-              <h3 class="title-a">
-                Services
-              </h3>
-              <p class="subtitle-a">
-                We laugh and joke, but we don't get distracted very easily. Our goal is to see the people laugh and joke at our uplifters on a rough day.
-              </p>
-              <div class="line-mf"></div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4">
+          <div class="col-md-">
+            
             <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="ion-monitor"></i></span>
-              </div>
-              <div class="service-content">
-                <h2 class="s-title">Nerd Jokes</h2>
-                <p class="s-description text-center">
-                  A neutron walks into a bar and orders a drink. When the barman gives it to him, he asks, "How much?" The barman replies, "For you - no charge."
-                </p>
-              </div>
-            </div>
+              
+            
+            
           </div>
-          <div class="col-md-4">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="ion-code-working"></i></span>
-              </div>
-              <div class="service-content">
-                <h2 class="s-title">Anime Jokes</h2>
-                <p class="s-description text-center">
-                  Q: What do saiyans wear to the beach?
-                  <br><br>
-                  A: Trunks
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="ion-laptop"></i></span>
-              </div>
-              <div class="service-content">
-                <h2 class="s-title">Gamer Jokes</h2>
-                <p class="s-description text-center">
-                  You know when you walk into a room and forget why you went in there?
-                  <br>
-                  That’s God playing Sims, he just canceled your action.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="ion-android-phone-portrait"></i></span>
-              </div>
-              <div class="service-content">
-                <h2 class="s-title">Tech Jokes</h2>
-                <p class="s-description text-center">
-                  The closest I’ve been to a diet this year is erasing food searches from my browser history.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="ion-paintbrush"></i></span>
-              </div>
-              <div class="service-content">
-                <h2 class="s-title">First Timer Jokes</h2>
-                <p class="s-description text-center">
-                  Yo momma is so fat, when she sat on an iPod, she made the iPad!
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="ion-stats-bars"></i></span>
-              </div>
-              <div class="service-content">
-                <h2 class="s-title">Political Jokes</h2>
-                <p class="s-description text-center">
-                  Being president is like running a cemetery: You’ve got a lot of people under you, and nobody’s listening.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section><!-- End Services Section -->
 
