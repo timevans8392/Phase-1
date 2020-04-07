@@ -42,7 +42,6 @@ document.addEventListener('DOMContentLoaded', function(){
   axios.get("https://pokeapi.co/api/v2/pokemon/" + urlEncodedSearchString)
 // This is the call to giphyapi via jQuery
   .then(function (response){
-  console.log(response.data)
   $.getJSON(`https://api.giphy.com/v1/gifs/search?q=${response.data.name}-pokemon&api_key=O6gYWlFjkxGXfXLfGAo201rGt0RZLZkQ`, function (gif) { 
   let i = Math.floor(Math.random() *25) + 0;
   $("<img>",{"src": gif.data[i].images.downsized.url,"class":"card-img-top"}).appendTo($('#giphy'))}) 
@@ -50,34 +49,31 @@ document.addEventListener('DOMContentLoaded', function(){
                     
 // This capitalizes the results
    let pokeName = document.getElementsByClassName("card-title");
-   console.log(pokeName)
    pokeName[0].textContent = uppercase(pokeName[0].textContent)
    pokeName[2].textContent = "Species: "+ pokeName[2].textContent.charAt(0).toUpperCase() + pokeName[2].textContent.slice(1)
    pokeName[4].textContent = "Type: "+ pokeName[4].textContent.charAt(0).toUpperCase() + pokeName[4].textContent.slice(1)
    pokeName[7].textContent = "Move: "+ uppercase(pokeName[7].textContent) 
-// This catches any entry that is not a valid pokemon name or index number
-   }).catch(function (error){
-   alert ("That's not a pokemon bro!")
-    })
+   if (response.status === 200){
+   $('#pokemon-container').effect('slide', 500)
+  }
+  }).catch(function (error){
+  alert("That's not a Pokémon bro!")
+  })
   })
 
-
 // This is the random pokemon button function
-
-  
-$('#random').click(randomPokemon)
+  $('#random').click(randomPokemon)
   function randomPokemon () {
   let rando = Math.floor(Math.random() * 807) + 1;
 
-  
   axios.get("https://pokeapi.co/api/v2/pokemon/" + rando)
 // This is the call to giphyapi via jQuery
   .then(function (response){
   $.getJSON(`https://api.giphy.com/v1/gifs/search?q=pokemon-${response.data.name}&api_key=O6gYWlFjkxGXfXLfGAo201rGt0RZLZkQ`, function (gif) { 
   let i = Math.floor(Math.random() *25) + 0;
   $("<img>",{"src": gif.data[i].images.downsized.url,"class":"card-img-top"}).appendTo($('#giphy'))})
-  let pokemonElement = renderPokemon(response)
-              
+  let pokemonElement = renderPokemon(response)   
+  console.log(pokemonElement)         
            
 // This capitalizes the results
   let pokeName = document.getElementsByClassName("card-title");
@@ -85,8 +81,14 @@ $('#random').click(randomPokemon)
   pokeName[2].textContent = "Species: "+ pokeName[2].textContent.charAt(0).toUpperCase() + pokeName[2].textContent.slice(1)
   pokeName[4].textContent = "Type: "+ pokeName[4].textContent.charAt(0).toUpperCase() + pokeName[4].textContent.slice(1)
   pokeName[7].textContent = "Move: "+ uppercase(pokeName[7].textContent) 
-    })
+// This is from jQuery UI
+   console.log(response)
+  
+  if (response.status === 200){
+    $('#pokemon-container').effect('slide', 500)
   }
+})
+}
 
 // This function removes '-' from result and capitalizes next word.
   function uppercase(move){
@@ -118,16 +120,7 @@ $("#hide").click(function ()
 }
 )
 
-  
-  
-//These are the jQuery UI functions:
-$( "#random" ).click(function() {
-  $( "#pokemon-container" ).effect( 'slide', 500);
-});
 
-$( "#search-form" ).submit(function() {
-  $( "#pokemon-container" ).effect( 'slide', 500);
-});
 
 
 })
