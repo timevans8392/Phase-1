@@ -1,5 +1,4 @@
 /*
-****COMMENTED OUT BATTLEMON.HTML****
 
 */
 //Object of poke that stores names, sprites, gifs, and more
@@ -9,20 +8,20 @@ var pokedex = {
         "HP": 100,
         "searchName": "bulbasaur",
         "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
-        "rearSprite": "",
+        "ally": "player",
         "description": "This is Bulbasaur",
-        "selectGif": 1,
+        "selectGif": "https://media.giphy.com/media/gbp8miehWvA5O/giphy.gif",
         "moveOne": {
             "name": "Smell Own Fart",
-            "animation": 5,
+            "animation": "https://media.giphy.com/media/dlblXNGqGITBK/giphy.gif",
         },
         "moveTwo": {
             "name": "Canon > Nikon",
-            "animation": 7,
+            "animation": "https://media.giphy.com/media/RjbdmNJXWnSEM/giphy.gif",
         },
         "moveThree": {
             "name": "Bob and Weave",
-            "animation": 6,
+            "animation": "https://media.giphy.com/media/1lEHpGxcanoVG/giphy.gif",
         }, 
     },
     "squirtle": {
@@ -30,20 +29,20 @@ var pokedex = {
         "HP": 100,
         "searchName": "squirtle",
         "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png",
-        "rearSprite": "",
+        "ally": "player",
         "description": "Squirtle is my fav",
-        "selectGif": 5,
+        "selectGif": "https://media.giphy.com/media/v55Vj51gfcRsk/giphy.gif",
         "moveOne": {
             "name": "Taunt",
-            "animation": 7,
+            "animation": "https://media.giphy.com/media/3xgR6JaucMaXe/giphy.gif",
         },
         "moveTwo": {
             "name": "SQUADDDDD!!!!!!",
-            "animation": 4,
+            "animation": "https://media2.giphy.com/media/ardUtH5FlenO8/giphy.gif?cid=61677ef553a8e37b716f392d42113fd59c130c1829bc0b76&rid=giphy.gif",
         },
         "moveThree": {
             "name": "Lover Not A Fighter",
-            "animation": 6,
+            "animation": "https://media.giphy.com/media/pMtLKNjb2IVXO/giphy.gif",
         }, 
     },
     "charmander": {
@@ -51,20 +50,20 @@ var pokedex = {
         "HP": 100,
         "searchName": "charmander",
         "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png",
-        "rearSprite": "",
+        "ally": "player",
         "description": "Charmander is cool",
-        "selectGif": 9,
+        "selectGif": "https://media.giphy.com/media/bkQAAeOePeK3e/giphy.gif",
         "moveOne": {
             "name": "Call The Fireman!",
-            "animation": 0,
+            "animation": "https://media.giphy.com/media/WJ7Tr9wi8xVe0/giphy.gif",
         },
         "moveTwo": {
             "name": "Laughs At Own Joke",
-            "animation": 11,
+            "animation": "https://media.giphy.com/media/wwPDRRWLpQeA0/giphy.gif",
         },
         "moveThree": {
             "name": "1-2 Step",
-            "animation": 7,
+            "animation": "https://media.giphy.com/media/PaO4UnhkVBEvS/giphy.gif",
         },
     },
     "snorlax": {
@@ -72,20 +71,20 @@ var pokedex = {
         "HP": 100,
         "searchName": "snorlax",
         "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/143.png",
-        "rearSprite": "",
+        "ally": "player",
         "description": "I'm sleepy too fam",
-        "selectGif": 0,
+        "selectGif": "https://media.giphy.com/media/e5xL4bU0ETgLm/giphy.gif",
         "moveOne": {
             "name": "Big Sleep",
-            "animation": 5,
+            "animation": "https://media.giphy.com/media/5RxNQCK01NdAc/giphy.gif",
         },
         "moveTwo": {
             "name": "Im Hungry!",
-            "animation": 1,
+            "animation": 'https://media.giphy.com/media/13LyF6rEoNbVZu/giphy.gif',
         },
         "moveThree": {
             "name": "Noooo, don't wake Snorlax!",
-            "animation": 9,
+            "animation": "https://media.giphy.com/media/SROwF69zCbMOY/giphy.gif",
         },
     },
     "eevee": {
@@ -93,20 +92,20 @@ var pokedex = {
         "HP": 100,
         "searchName": "eevee",
         "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/133.png",
-        "rearSprite": "",
+        "ally": "player",
         "description": "Can Eye Pet That DAWG",
-        "selectGif": 0,
+        "selectGif": "https://media.giphy.com/media/133cAiXr4T1te/giphy.gif",
         "moveOne": {
-            "name": "Big Slide",
-            "animation": 3,
+            "name": "Going Turbo",
+            "animation": "https://media.giphy.com/media/zA8DCuqyKtEK4/giphy.gif",
         },
         "moveTwo": {
             "name": "Dance Machine",
-            "animation": 4,
+            "animation": "https://media.giphy.com/media/kz5CpmaFn9BAI/giphy.gif",
         },
         "moveThree": {
             "name": "Cuddle",
-            "animation": 11,
+            "animation": "https://media.giphy.com/media/102u5uX2Zk6wBq/giphy.gif",
         },
     },
     "gengar": {
@@ -114,20 +113,20 @@ var pokedex = {
         "HP": 100,
         "searchName": "gengar",
         "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/94.png",
-        "rearSprite": "",
+        "ally": "player",
         "description": "Caspers evil twin is trippin",
-        "selectGif": 9,
+        "selectGif": "https://media.giphy.com/media/ryf8k3opPug8M/giphy.gif",
         "moveOne": {
             "name": "I See Dead People",
-            "animation": 8,
+            "animation": "https://media.giphy.com/media/yTkhVSkqDblfO/giphy.gif",
         },
         "moveTwo": {
             "name": "Kamehameha",
-            "animation": 4,
+            "animation": "https://media.giphy.com/media/U2qDK70S23fwY/giphy.gif",
         },
         "moveThree": {
             "name": "Muahahahahahaha",
-            "animation": 15,
+            "animation": "https://media.giphy.com/media/EJwx387GEmm1q/giphy.gif",
         },
     },
     "vulpix": {
@@ -135,20 +134,20 @@ var pokedex = {
         "HP": 100,
         "searchName": "vulpix",
         "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/37.png",
-        "rearSprite": "",
+        "ally": "player",
         "description": "Who's a good boy, thats right, Vulpix is!",
-        "selectGif": 0,
+        "selectGif": "https://media.giphy.com/media/11JusiVENarrig/giphy.gif",
         "moveOne": {
             "name": "Can Eye Pet Dat DAWG",
-            "animation": 4,
+            "animation": "https://media.giphy.com/media/OcQeMsk7diiT6/giphy.gif",
         },
         "moveTwo": {
             "name": "OP Puppy Eyes",
-            "animation": 15,
+            "animation": "https://media.giphy.com/media/isrZZ7YHBlrQQ/giphy.gif",
         },
         "moveThree": {
-            "name": "Party Animal",
-            "animation": 14,
+            "name": "You bore me!",
+            "animation": "https://media.giphy.com/media/MR2L4RdJpDvNK/giphy.gif",
         },
     },
     "pikachu": {
@@ -156,20 +155,20 @@ var pokedex = {
         "HP": 100,
         "searchName": "pikachu",
         "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png",
-        "rearSprite": "",
+        "ally": "player",
         "description": "PLOT ARMOR",
-        "selectGif": 1,
+        "selectGif": "https://media.giphy.com/media/xuXzcHMkuwvf2/giphy.gif",
         "moveOne": {
-            "name": "LOVE MEEEEEE",
-            "animation": 8,
+            "name": "No waayyyyy",
+            "animation": "https://media.giphy.com/media/3kzJvEciJa94SMW3hN/giphy.gif",
         },
         "moveTwo": {
-            "name": "Fine, I will love me myself!",
-            "animation": 2,
+            "name": "LMAOOOO",
+            "animation": "https://media.giphy.com/media/tVlVQSoY7g8H6/giphy.gif",
         },
         "moveThree": {
-            "name": "Oh now you want to love me!",
-            "animation": 3,
+            "name": "Please love me!",
+            "animation": "https://media.giphy.com/media/dJYoOVAWf2QkU/giphy.gif",
         },
     },
     "pidgeot": {
@@ -177,20 +176,20 @@ var pokedex = {
         "HP": 100,
         "searchName": "pidgeot",
         "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/18.png",
-        "rearSprite": "",
+        "ally": "player",
         "description": "Government survielence drone",
-        "selectGif": 0,
+        "selectGif": "https://media.giphy.com/media/zeKWDcr47kYgw/giphy.gif",
         "moveOne": {
             "name": "Dive Bomb",
-            "animation": 6,
+            "animation": "https://media.giphy.com/media/RukGQRqOYKuek/giphy.gif",
         },
         "moveTwo": {
             "name": "Pidgot is PLURAL",
-            "animation": 5,
+            "animation": "https://media.giphy.com/media/Wb3frOBROJjdS/giphy.gif",
         },
         "moveThree": {
             "name": "Spreading COVID-19",
-            "animation": 14,
+            "animation": "https://media.giphy.com/media/uONAkav2vDEd2/giphy.gif",
         },
     },
     "jigglypuff": {
@@ -198,20 +197,20 @@ var pokedex = {
         "HP": 100,
         "searchName": "jigglypuff",
         "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/39.png",
-        "rearSprite": "",
+        "ally": "player",
         "description": "Jiggle physics",
-        "selectGif": 5,
+        "selectGif": "https://media.giphy.com/media/zji7acZDpks9i/giphy.gif",
         "moveOne": {
             "name": "Catch These Hands",
-            "animation": 3,
+            "animation": "https://media.giphy.com/media/tiOUGrxJnWtfG/giphy.gif",
         },
         "moveTwo": {
             "name": "You Wouldn't Like Me When I'm Angry!",
-            "animation": 0,
+            "animation": "https://media.giphy.com/media/eXUlPn1gmZavu/giphy.gif",
         },
         "moveThree": {
             "name": "You Really Mean it?",
-            "animation": 9,
+            "animation": "https://media.giphy.com/media/oHB0VofpRubjW/giphy.gif",
         },
     },
     "magikarp": {
@@ -219,20 +218,20 @@ var pokedex = {
         "HP": 100,
         "searchName": "magikarp",
         "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/129.png",
-        "rearSprite": "",
+        "ally": "player",
         "description": "Beware of splash",
-        "selectGif": 5,
+        "selectGif": "https://media.giphy.com/media/tTSn8V8szr72g/giphy.gif",
         "moveOne": {
             "name": "TILAPIA IS NOT A REAL FISH",
-            "animation": 4,
+            "animation": "https://media.giphy.com/media/11egHKtNpdIICc/giphy.gif",
         },
         "moveTwo": {
             "name": "Magikarp splash is USELESS",
-            "animation": 14,
+            "animation": "https://media.giphy.com/media/ysYvIll9qWCNq/giphy.gif",
         },
         "moveThree": {
             "name": "I mean Magikarp splash is REALLY USELESS",
-            "animation": 3,
+            "animation": "https://media.giphy.com/media/Zt5jvm3Qusle8/giphy.gif",
         },
     },
     "psyduck": {
@@ -240,29 +239,29 @@ var pokedex = {
         "HP": 100,
         "searchName": "psyduck",
         "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/54.png",
-        "rearSprite": "",
+        "ally": "player",
         "description": "Psyduck is learning software development. It is giving him a headache!",
-        "selectGif": 4,
+        "selectGif": "https://media.giphy.com/media/ygRvBA8SWudws/giphy.gif",
         "moveOne": {
             "name": "SYNTAX ERRORRRRRR",
-            "animation": 0,
+            "animation": "https://media.giphy.com/media/hQ0GvkpZwYcgM/giphy.gif",
         },
         "moveTwo": {
             "name": "OMG Bootstrap WHY ARE MY ITEMS NOT ALIGNED?!?!?!?",
-            "animation": 1,
+            "animation": "https://media.giphy.com/media/asbP3eIpTXlxS/giphy.gif",
         },
         "moveThree": {
             "name": "When Javascript FINALLY Starts Making Sense!",
-            "animation": 3,
+            "animation": "https://media.giphy.com/media/3IQsGPmOK8s4U/giphy.gif",
         },
     },
     "meowth": {
         "name": "Meowth",
         "HP": 100,
-        "searchName": "jigglypuff",
+        "searchName": "meowth",
         "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/52.png",
-        "rearSprite": "",
-        "description": "Jiggle physics",
+        "ally": "enemy",
+        "description": "Jeff Bezos",
         "selectGif": 19,
     },
     "charizard": {
@@ -270,8 +269,8 @@ var pokedex = {
         "HP": 100,
         "searchName": "charizard",
         "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png",
-        "rearSprite": "",
-        "description": "Beware of splash",
+        "ally": "enemy",
+        "description": "Fireman",
         "selectGif": "",
         "moves": {
             "moveOne": {
@@ -293,8 +292,8 @@ var pokedex = {
         "HP": 100,
         "searchName": "mewtwo",
         "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/150.png",
-        "rearSprite": "",
-        "description": "This excedrin has not kicked in yet",
+        "ally": "enemy",
+        "description": "Prepare to diieee",
         "selectGif": 2,
         "moves": {
             "moveOne": {
@@ -318,21 +317,23 @@ var pokedex = {
 var selectedPokemon = {
     "team": [],
     "buttonToggle": [],
-    "enemyTeam": [pokedex.meowth, pokedex.charizard,pokedex.mewtwo],
+    "enemyTeam": [pokedex.meowth, pokedex.charizard, pokedex.mewtwo],
     "playerPoke": null,
     "enemyPoke": null,
+    "playerPosition": 0,
+    "enemyPosition": 0,
     "statementBanner": "",
 }
 
-
-
+//Placed the pokiapi path to a constant
 const pokePath = "https://pokeapi.co/api/v2/pokemon/"
 
 //Methods to load upon loading of the webpage
 $(document).ready(function() {
-    document.querySelector("#actionImage").style.visibility = "hidden"
-    $("#topPart").hide()
+    $("#midPart").hide()
     $("#bottomPart").hide()
+    document.querySelector("#actionImage").style.visibility = "hidden"
+    showTeamRocket()
     addListers()
     clearSelected()
 });
@@ -340,8 +341,9 @@ $(document).ready(function() {
 //Add a function to add onclick and onhover listeners
 function addListers () {
     $('.butPick').click(function() {
-        $(this).toggleClass("down");
         const passPoke = pokedex[this.innerHTML.toLowerCase()]
+        selectGif(passPoke)
+        $(this).toggleClass("down");
         pokeCheck(this, passPoke)
       });
 
@@ -355,6 +357,27 @@ function addListers () {
         const passPoke = pokedex[this.innerHTML.toLowerCase()]
         changeHoverSelector(passPoke)
     })
+}
+
+function showTeamRocket () {
+    setTimeout(function(){
+        $("#topPart").hide()
+        $("#midPart").show()
+    },2500)
+}
+
+function selectGif (poke) {
+    $("#idPick").prop("src", poke.selectGif)
+    $("#idBanner").prop("innerHTML","You selected "+poke.name)
+    $("#idPick").show()
+    $("#idBanner").show()
+    $("#picPick").hide()
+    setTimeout(function(){
+        $("#idPick").hide()
+        $("#picPick").show()
+        $("#idBanner").hide()
+        $("#idPick").prop("src","")
+    },2000)
 }
 
 //function that will change the img, name, and description due to hover
@@ -431,35 +454,35 @@ function transitionToBattle () {
     $("#midPart").hide()
     $("#bottomPart").show()
     battleStart()
+    selectedPokemon.enemyPoke = selectedPokemon.enemyTeam[0]
     updatePokeSprite()
-
-    $.ajax(
-        {
-          url: "http://api.giphy.com/v1/gifs/search?q=mewtwo&api_key=O6gYWlFjkxGXfXLfGAo201rGt0RZLZkQ",
-          success: function (poke) {
-            console.log("Go")
-          }
-        }
-    )
 }
 function updateUI () {
     $("#enemyName").prop("innerHTML", selectedPokemon.enemyPoke.name)
     $("#enemyHP").prop("innerHTML", selectedPokemon.enemyPoke.HP + " / 100")
     $("#playerPokeName").prop("innerHTML", selectedPokemon.playerPoke.name)
     $("#playerPokeHP").prop("innerHTML", selectedPokemon.playerPoke.HP + " / 100")
-    $("#butMove1").prop("innerHTML", selectedPokemon.playerPoke.butMove1)
-    $("#butMove2").prop("innerHTML", selectedPokemon.playerPoke.butMove2)
-    $("#butMove3").prop("innerHTML", selectedPokemon.playerPoke.butMove3)
+    $("#butMove1").prop("innerHTML", selectedPokemon.playerPoke.moveOne.name)
+    $("#butMove2").prop("innerHTML", selectedPokemon.playerPoke.moveTwo.name)
+    $("#butMove3").prop("innerHTML", selectedPokemon.playerPoke.moveThree.name)
     $("#statementBanner").prop("innerHTML",selectedPokemon.statementBanner)
 }
 
 function updatePokeSprite () {
     $.ajax(
         {
-            url: "https://pokeapi.co/api/v2/pokemon/"+selectedPokemon.team[0].name.toLowerCase(),
+            url: pokePath+selectedPokemon.playerPoke.searchName,
             success: function (poke) {
-                console.log(poke.sprites.back_default)
                 $("#playerSprite").prop("src",poke.sprites.back_default)
+            }
+        }
+    )
+
+    $.ajax(
+        {
+            url: pokePath + selectedPokemon.enemyPoke.searchName,
+            success: function (poke) {
+                $("#enemySprite").prop("src", poke.sprites.front_default)
             }
         }
     )
@@ -476,16 +499,9 @@ function battleStart () {
 }
 
 function actionBut (but) {
-    $.ajax(
-        {
-          url: "http://api.giphy.com/v1/gifs/search?q="+selectedPokemon.playerPoke.name.toLowerCase()+"&api_key=O6gYWlFjkxGXfXLfGAo201rGt0RZLZkQ",
-          success: function (poke) {
-            var move = getMove(but.id)
-            $("#actionImage").prop("src",poke.data[move].images.original.url)
-            var dmg = damage(selectedPokemon.enemyPoke)
-            $("#statementbanner").prop("innerHTML",selectedPokemon.playerPoke.name+" damaged " + selectedPokemon.enemyPoke.name + " for " + dmg)
-            
-            $("#moveButton").prop('disabled', true)
+    var move = getMove(but.id)
+            $("#actionImage").prop("src",move)
+            var dmg = damage(selectedPokemon.playerPoke,selectedPokemon.enemyPoke)
             setTimeout(function(){
                 document.querySelector("#actionImage").style.visibility = "visible"
                 setTimeout(function(){ 
@@ -495,10 +511,7 @@ function actionBut (but) {
                 }, 2000)
                 
             }, 1000)
-            
-          }
-        }
-      )
+            $("#commandButtons").hide()
 }
 
 function getMove (id){
@@ -506,8 +519,21 @@ function getMove (id){
         case "butMove1": return selectedPokemon.playerPoke.moveOne.animation; break;
         case "butMove2": return selectedPokemon.playerPoke.moveTwo.animation; break;
         case "butMove3": return selectedPokemon.playerPoke.moveThree.animation; break;
-
+        case "butMove4": return randomGif(); break;
     }
+}
+
+function randomGif () {
+    let dmg = Math.floor(Math.random() * 25)
+    $.ajax(
+        {
+          url: "http://api.giphy.com/v1/gifs/search?q=pokemon&api_key=O6gYWlFjkxGXfXLfGAo201rGt0RZLZkQ",
+          success: function (poke) {
+            console.log(poke.data[dmg].images.original.url)
+            return poke.data[dmg].images.original.url
+          }
+        }
+      )
 }
 
 function enemyTurn () {
@@ -517,14 +543,13 @@ function enemyTurn () {
           url: "http://api.giphy.com/v1/gifs/search?q="+selectedPokemon.enemyPoke.name.toLowerCase()+"&api_key=O6gYWlFjkxGXfXLfGAo201rGt0RZLZkQ",
           success: function (poke) {
             $("#actionImage").prop("src",poke.data[0].images.original.url)
-            var dmg = damage(selectedPokemon.playerPoke)
-            $("#statementbanner").prop("innerHTML",selectedPokemon.enemyPoke.name+ " damaged " + selectedPokemon.playerPoke.name + " for " + dmg)
-            
+            damage(selectedPokemon.enemyPoke,selectedPokemon.playerPoke)
             setTimeout(function(){
                 document.querySelector("#actionImage").style.visibility = "visible"
                 setTimeout(function(){ 
                     document.querySelector("#actionImage").style.visibility = "hidden"
                     updateUI()
+                    $("#commandButtons").show()
                     playerTurn()
                 }, 2000)
             }, 1000)
@@ -540,11 +565,44 @@ function playerTurn () {
     $("#moveButton").prop('disabled', false)
 }
 
-function damage (poke) {
+function damage (sender, receiver) {
     let dmg = Math.floor(Math.random() * 22) + 33
-    poke.HP = poke.HP - dmg
-    console.log(poke.HP)
-    console.log(selectedPokemon.playerPoke.HP)
-    console.log(selectedPokemon.enemyPoke.HP)
-    return dmg
+    $("#statementbanner").prop("innerHTML",sender.name+ " damaged " + receiver.name + " for " + dmg)
+    receiver.HP = receiver.HP - dmg
+    if(receiver.HP <= 0) {
+        setTimeout(function(){
+            $("#actionBanner").prop("innerHTML",receiver.name+" has been defeated").show()
+            setTimeout(function(){
+                $("#actionBanner").prop("innerHTML","").hide()
+                nextPoke(receiver)
+                updatePokeSprite()
+            },500)
+        },2000)
+    }
+}
+
+function nextPoke (poke) {
+    if (poke.ally === "player") {
+        selectedPokemon.playerPosition++
+        if(selectedPokemon.playerPosition === 3) { victory(true)}
+        selectedPokemon.playerPoke = selectedPokemon.team[selectedPokemon.playerPosition]
+        updatePokeSprite()
+    } else {
+        selectedPokemon.enemyPosition++
+        if(selectedPokemon.enemyPosition === 3 ) { victory(false)}
+        selectedPokemon.enemyPoke = selectedPokemon.enemyTeam[selectedPokemon.enemyPosition]
+        updatePokeSprite()
+    }
+}
+
+function victory (cond) {
+    if(cond === true){
+        $("#battleMain").hide()
+        $("#vic").prop*("innerHTML","VICTORY")
+        $("#final").prop("src","https://media.giphy.com/media/cQNRp4QA8z7B6/giphy.gif")
+    } else {
+        $("#battleMain").hide()
+        $("#vic").prop*("innerHTML","DEFEATED")
+        $("#final").prop("src","https://media.giphy.com/media/wzRfW1SV1DSec/giphy.gif")
+    }
 }
