@@ -38,3 +38,9 @@ Saturday, 4/4/20 by Ulysses
 I cleaned up the code in the guesspokemon.js.
 I added a link to GIPHY to encourage the user to create a GIF that is not appearing.
 I implemented an effect from jQuery UI on the div containing the API results.
+
+Saturday, 4/4/20 by Henry
+Got rid of about pokemon page and combined with Uly's page.
+
+Sunday, 4/5/20 by Henry
+Got rid of the nav bar in Quintus Batllemon.html file.
