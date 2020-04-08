@@ -1,0 +1,16 @@
+{
+  "name": "phase1-pokemon-project",
+  "version": "1.0.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timevans8392/Phase-1.git"
+  },
+  "scripts": {
+    "format": "prettier --single-quote --no-semi --write \"**/*.js\" \"!PO Project/assets/vendor/**\""
+  },
+  "devDependencies": {
+    "prettier": "1.19.1",
+    "standard": "14.3.1"
+  }
+}
