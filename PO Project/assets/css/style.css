@@ -805,7 +805,7 @@ a:hover {
   color: #fff;
   text-align: center;
   width: 200px;
-  margin: 150px;
+  /* margin: 150px; */
   align-items: center;
 }
 
