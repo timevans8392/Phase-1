@@ -41,14 +41,13 @@ document.addEventListener('DOMContentLoaded', function() {
         .get('https://pokeapi.co/api/v2/pokemon/' + urlEncodedSearchString)
         // This is the call to giphyapi via jQuery
         .then(function(response) {
-          console.log(response.data)
           $.getJSON(
             `https://api.giphy.com/v1/gifs/search?q=${response.data.name}-pokemon&api_key=O6gYWlFjkxGXfXLfGAo201rGt0RZLZkQ`,
             function(gif) {
               const i = Math.floor(Math.random() * 25) + 0
               $('<img>', {
-                src: gif.data[i].images.downsized.url,
-                class: 'card-img-top'
+                'src': gif.data[i].images.downsized.url,
+                'class': 'card-img-top'
               }).appendTo($('#giphy'))
             }
           )
@@ -56,7 +55,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
           // This capitalizes the results
           const pokeName = document.getElementsByClassName('card-title')
-          console.log(pokeName)
           pokeName[0].textContent = uppercase(pokeName[0].textContent)
           pokeName[2].textContent =
             'Species: ' +
@@ -91,8 +89,8 @@ document.addEventListener('DOMContentLoaded', function() {
           function(gif) {
             const i = Math.floor(Math.random() * 25) + 0
             $('<img>', {
-              src: gif.data[i].images.downsized.url,
-              class: 'card-img-top'
+              'src': gif.data[i].images.downsized.url,
+              'class': 'card-img-top'
             }).appendTo($('#giphy'))
           }
         )
@@ -111,11 +109,11 @@ document.addEventListener('DOMContentLoaded', function() {
           pokeName[4].textContent.slice(1)
         pokeName[7].textContent = 'Move: ' + uppercase(pokeName[7].textContent)
         // This is from jQuery UI
-        console.log(response)
-
         if (response.status === 200) {
           $('#pokemon-container').effect('slide', 500)
         }
+      }).catch(function(error) {
+       alert("uh-oh!")
       })
   }
 
@@ -145,12 +143,5 @@ document.addEventListener('DOMContentLoaded', function() {
     $('#show').show()
   })
 
-  // These are the jQuery UI functions:
-  $('#random').click(function() {
-    $('#pokemon-container').effect('slide', 500)
-  })
 
-  $('#search-form').submit(function() {
-    $('#pokemon-container').effect('slide', 500)
-  })
 })
