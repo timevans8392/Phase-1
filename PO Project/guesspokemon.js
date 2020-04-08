@@ -6,21 +6,21 @@ document.addEventListener('DOMContentLoaded', function() {
            <div class="card cardStyle test"style="width: 35rem;">
               <div id ="giphy"></div>
            </div>
-                
+
               <div class="card-body card cardStyle space d-flex flex-row" >
                   <div class="d-flex flex-column test">
                     <h1 class="card-title"style=color:red>${pokemon.data.name}</h1>
                     <h2 class="card-title"style=color:navy>#${pokemon.data.id}</h2>
                     <strong class="card-title">${pokemon.data.species.name}</strong>
                     <p class="card-title"><strong>Order: ${pokemon.data.order}</strong></p>
-                    <strong class="card-title">${pokemon.data.types[0].type.name}</strong> 
-                    <p class="card-title"><strong>Weight: ${pokemon.data.weight} lbs.</strong></p>  
-                    <p class="card-title"><strong>Height: ${pokemon.data.height}ft</strong></p>  
-                    <strong class="card-title">${pokemon.data.moves[i].move.name}</strong> 
-                    <p class="card-title"><strong>Base Experience: ${pokemon.data.base_experience}</strong></p>   
+                    <strong class="card-title">${pokemon.data.types[0].type.name}</strong>
+                    <p class="card-title"><strong>Weight: ${pokemon.data.weight} lbs.</strong></p>
+                    <p class="card-title"><strong>Height: ${pokemon.data.height}ft</strong></p>
+                    <strong class="card-title">${pokemon.data.moves[i].move.name}</strong>
+                    <p class="card-title"><strong>Base Experience: ${pokemon.data.base_experience}</strong></p>
                   </div>
                     <div class="d-flex flex-column pokeImage">
-                      <img class=pokeImage src="${pokemon.data.sprites.front_default}"> 
+                      <img class=pokeImage src="${pokemon.data.sprites.front_default}">
                     </div>
                </div>
                   `
@@ -41,6 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
         .get('https://pokeapi.co/api/v2/pokemon/' + urlEncodedSearchString)
         // This is the call to giphyapi via jQuery
         .then(function(response) {
+          console.log(response.data)
           $.getJSON(
             `https://api.giphy.com/v1/gifs/search?q=${response.data.name}-pokemon&api_key=O6gYWlFjkxGXfXLfGAo201rGt0RZLZkQ`,
             function(gif) {
@@ -55,6 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
           // This capitalizes the results
           const pokeName = document.getElementsByClassName('card-title')
+          console.log(pokeName)
           pokeName[0].textContent = uppercase(pokeName[0].textContent)
           pokeName[2].textContent =
             'Species: ' +
@@ -95,7 +97,6 @@ document.addEventListener('DOMContentLoaded', function() {
           }
         )
         const pokemonElement = renderPokemon(response)
-        console.log(pokemonElement)
 
         // This capitalizes the results
         const pokeName = document.getElementsByClassName('card-title')
@@ -129,7 +130,6 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // This is a aboutPokemon button click event and will insert about pokemon between about pokemon and random pokemon buttons
-
   $('#show').click(function() {
     $('#show').css('display', 'none')
     $('#data').show()
@@ -143,5 +143,14 @@ document.addEventListener('DOMContentLoaded', function() {
     $('#hide').css('display', 'none')
     $('#data').hide()
     $('#show').show()
+  })
+
+  // These are the jQuery UI functions:
+  $('#random').click(function() {
+    $('#pokemon-container').effect('slide', 500)
+  })
+
+  $('#search-form').submit(function() {
+    $('#pokemon-container').effect('slide', 500)
   })
 })
