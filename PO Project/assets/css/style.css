@@ -1292,3 +1292,18 @@ footer .credits {
 footer .credits a {
   color: #fff;
 }
+
+#battleCore {
+  height: 600px;
+  width: 750px;
+}
+
+#rocketGif {
+  height: 540px;
+  width: 750px;
+  margin-top:30px;
+}
+
+.frontBattleButton {
+  width: 750px;
+}
