@@ -250,3 +250,52 @@ margin-left:110px;
   justify-content: space-evenly;
 }
 
+.frontBattleButton {
+  background-color: black;
+  color: white;
+  border: none;
+}
+
+.frontBattleButton:hover {
+  background-color: white;
+  color: black;
+}
+
+#idChoose {
+  color: white;
+}
+
+#statementbanner {
+  border: 2px solid #506860; 
+  background-color: #f8f8d8;
+  color: #506860;
+}
+
+#battleArena {
+  background-size: 100% 100%; 
+  background-image: url('background.jpg'); 
+  background-repeat: no-repeat;
+}
+
+#statementbanner {
+  border: 2px solid #506860; 
+  background-color: #f8f8d8;
+  color: #506860;
+}
+
+.moveButton {
+  border: none;
+  background-color: #f8f8d8;
+  color: #506860;
+}
+
+.moveButton:hover {
+  border: 2px solid #506860;
+  background-color: #506860;
+  color: #f8f8d8;
+}
+
+#commandButtons {
+  border: 2px solid #506860; 
+  background-color: #f8f8d8;  
+}
