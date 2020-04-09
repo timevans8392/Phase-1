@@ -1,13 +1,13 @@
 var selectHTML = `
     <div class="d-flex justify-content-center" id="selectDescription">
-    <h1>Choose 3 Pokemon</h1>
+    <h1 class="idChoose" style="color: white;">Choose 3 Pokemon</h1>
     </div>
 
     <div class="d-flex" id="selectPick">
-    <div class="col-3 d-flex flex-column justify-content-end" id="pokePick">
-        <img class="mx-4" id="hoverPic" src="">
-        <h3 class="text-center" id="hoverName"></h3>
-        <p class="text-center" id="hoverDescription"></p>
+    <div class="col-3 d-flex flex-column" id="pokePick">
+        <img class="mx-4 align-self-center" id="hoverPic" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png">
+        <h3 class="text-center" id="hoverName" style="font-weight: 600;">Bulbasaur</h3>
+        <p class="text-center" id="hoverDescription" style="font-weight: 600; color: white;">This is a Bulbasaur</p>
     </div>
 
     <div class="d-flex flex-column col-7" id="picPick">
@@ -43,21 +43,21 @@ var selectHTML = `
             </div>
             <div id="selectedCell" class="mx-2" style="height: 85px;">
                 <img class=" clearOne" style="height: 70px;" id="hoverPicOne" src="">
-                <p class=" clearTwo" id="hoverNameOne"></p>
+                <p class=" clearTwo" style="font-weight: 600; color: white;" id="hoverNameOne"></p>
             </div>
             <div id="selectedCell" class="mx-2" style="height: 85px;">
                 <img class=" clearOne" style="height: 70px;" id="hoverPicTwo" src="">
-                <p class=" clearTwo" id="hoverNameTwo"></p>
+                <p class=" clearTwo" style="font-weight: 600; color: white;" id="hoverNameTwo"></p>
             </div>
             <div id="selectedCell" class="mx-2" style="height: 85px;">
                 <img class=" clearOne" style="height: 70px;" id="hoverPicThree" src="">
-                <p class=" clearTwo" id="hoverNameThree"></p>
+                <p class=" clearTwo" style="font-weight: 600; color: white;" id="hoverNameThree"></p>
             </div>
         </div>
     </div>
     </div>
 
     <div class="mt-1" id="buttonBanner">
-    <button class="w-100" type="button">Proceed to battle</button>
+    <button class="w-100 frontBattleButton" type="button">Proceed to battle</button>
     </div>
 `

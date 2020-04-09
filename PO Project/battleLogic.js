@@ -258,7 +258,7 @@ var pokedex = {
         animation: 'https://media.giphy.com/media/hQ0GvkpZwYcgM/giphy.gif'
       },
       moveTwo: {
-        name: 'OMG Bootstrap WHY ARE MY ITEMS NOT ALIGNED?!?!?!?',
+        name: 'Bootstrap Y U NO WORK RIGHT!?',
         animation: 'https://media.giphy.com/media/asbP3eIpTXlxS/giphy.gif'
       },
       moveThree: {
@@ -355,6 +355,9 @@ var pokedex = {
     addListers()
     document.querySelector("#idBanner").style.visibility = "hidden"
     document.querySelector("#idPick").style.visibility = "hidden"
+    document.querySelector("#hoverPic").style.visibility = "hidden"
+    document.querySelector("#hoverName").style.visibility = "hidden"
+    document.querySelector("#hoverDescription").style.visibility = "hidden"
   }
   
   //Add a function to add onclick and onhover listeners
@@ -383,16 +386,20 @@ var pokedex = {
     $('#idBanner').prop('innerHTML', 'You selected ' + poke.name)
     document.querySelector("#idBanner").style.visibility = "visible"
     document.querySelector("#idPick").style.visibility = "visible"
+    $(".butPick").prop("disabled", true)
     setTimeout(function() {
       document.querySelector("#idBanner").style.visibility = "hidden"
       document.querySelector("#idPick").style.visibility = "hidden"
       $('#idPick').prop('src', '')
-      console.log("hi")
+      $(".butPick").prop("disabled",false)
     }, 2000)
   }
   
   //function that will change the img, name, and description due to hover
   function changeHoverSelector(poke) {
+    document.querySelector("#hoverPic").style.visibility = "visible"
+    document.querySelector("#hoverName").style.visibility = "visible"
+    document.querySelector("#hoverDescription").style.visibility = "visible"
     $('#hoverPic').prop('src', poke.frontSprite)
     $('#hoverName').prop('innerHTML', poke.name)
     $('#hoverDescription').prop('innerHTML', poke.description)
@@ -461,12 +468,15 @@ var pokedex = {
   }
   
   function transitionToBattle() {
-    $("#battleCore").prop("innerHTML", beginBattle)
-    document.querySelector("#battleCore").style = style="background-size: 100% 100%; height: 400px; width: 750px; background-image: url('background.jpg');  background-repeat: no-repeat;"
+    if(selectedPokemon.team.length === 3){
+      $("#battleCore").prop("innerHTML", beginBattle)
     addListers()
     battleStart()
     selectedPokemon.enemyPoke = selectedPokemon.enemyTeam[0]
     updatePokeSprite()
+    } else {
+      alert("Please Select 3 Pokemon!")
+    }
   }
   function updateUI() {
     $('#enemyName').prop('innerHTML', selectedPokemon.enemyPoke.name)
@@ -508,6 +518,7 @@ var pokedex = {
   
   function actionBut(but) {
     if (done === true) {
+      console.log("Done")
       return
     }
     var move = getMove(but.id)
@@ -521,7 +532,6 @@ var pokedex = {
         enemyTurn()
       }, 2000)
     }, 1000)
-    $('#commandButtons').hide()
   }
   
   function getMove(id) {
@@ -555,6 +565,7 @@ var pokedex = {
   
   function enemyTurn() {
     if (done === true) {
+      console.log("Done")
       return
     }
     $('#statementbanner').prop("Team Rocket's Turn")
@@ -571,7 +582,7 @@ var pokedex = {
           setTimeout(function() {
             document.querySelector('#actionImage').style.visibility = 'hidden'
             updateUI()
-            $('#commandButtons').show()
+            $('.moveButton').prop('disable',false)
             playerTurn()
           }, 2000)
         }, 1000)
@@ -581,11 +592,17 @@ var pokedex = {
   
   function playerTurn() {
     $('#statementbanner').prop('innerHTML', 'Your Turn')
-    $('#moveButton').prop('disabled', false)
+    $('.moveButton').prop('disabled', false)
   }
   
   function damage(sender, receiver) {
-    let dmg = Math.floor(Math.random() * 22) + 33
+    let dmg
+    if(sender.name === 'Mewtwo'){
+      dmg = Math.floor(Math.random() * 22) + 43
+    } else {
+      dmg = Math.floor(Math.random() * 22) + 33
+    }
+    
     $('#statementbanner').prop(
       'innerHTML',
       sender.name + ' damaged ' + receiver.name + ' for ' + dmg
@@ -620,22 +637,20 @@ var pokedex = {
   
   function victory(cond) {
     if (cond === true) {
-      $('#battleMain').hide()
-      $('#vic').prop * ('innerHTML', 'DEFEATED')
-      $('#final').prop(
+      document.querySelector('#actionImage').style.visibility = 'visible'
+      $('#statementbanner').prop('innerHTML', 'DEFEATED')
+      $('#actionImage').prop(
         'src',
         'https://media.giphy.com/media/wzRfW1SV1DSec/giphy.gif'
       )
-      console.log('done true')
       done = true
     } else {
-      $('#battleMain').hide()
-      $('#vic').prop * ('innerHTML', 'VICTORY')
-      $('#final').prop(
+      document.querySelector('#actionImage').style.visibility = 'visible'
+      $('#statementbanner').prop('innerHTML', 'VICTORY')
+      $('#actionImagefinal').prop(
         'src',
         'https://media.giphy.com/media/cQNRp4QA8z7B6/giphy.gif'
       )
-      console.log('done true')
       done = true
     }
   }
