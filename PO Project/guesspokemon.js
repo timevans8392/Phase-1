@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
           pokeName[7].textContent =
             'Move: ' + uppercase(pokeName[7].textContent)
           if (response.status === 200) {
-            $('#pokemon-container').effect('slide', 500)
+            $('#pokemon-container').effect('slide', 1000)
           }
         })
         .catch(function(error) {
@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
         pokeName[7].textContent = 'Move: ' + uppercase(pokeName[7].textContent)
         // This is from jQuery UI
         if (response.status === 200) {
-          $('#pokemon-container').effect('slide', 500)
+          $('#pokemon-container').effect('slide', 1000)
         }
       }).catch(function(error) {
        alert("uh-oh!")
